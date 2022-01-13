@@ -1,4 +1,4 @@
-# TPBench - A Comprehensive HPC Benchmark Tool and Framework
+# TPBench - Benchmarks for the throughput of computing kernels on HPC
 
 ## 1 - Introduction
 
