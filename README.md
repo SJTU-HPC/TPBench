@@ -1,4 +1,4 @@
-# TPBench - Benchmarks for the throughput of computing kernels on HPC
+# TPBench - A Comprehensive HPC Benchmark Tool and Framework
 
 ## 1 - Introduction
 
@@ -85,6 +85,28 @@ your code with timer in tptimer.h, and put your interface definition and informa
 
 ## 5 - Changelog
 
+### Version 0.71
+- Add support for Arm SVE with any width in kernel `d_fmaldr` and `d_mulldr`
+
+### Version 0.7
+- Add support to Armv8 NEON in kernel `d_fmaldr`
+
+### Version 0.61
+- Fix the method of timing the total wall time of the GEMM kernels in groups' test.
+
+### Version 0.6
+- Add the total wall time output of the GEMM kernels in groups' test.
+- Change the files structure.
+  - Add `tplog.h` and `tplog.c`.
+  - Move the `report_performance` function and `log_step_info` function into above two files.
+- Change the kernel `d_gemmbcast` into `d_gemm_bcast` to unify the kernel names' format.
+
+### Version 0.5
+- Add `log_step_info` function in group kernels to support recording every rank's every step's datas into a csv file.
+
+### Version 0.4
+- Add the AVX-2 support of every kernels with AVX-512.
+
 ### Version 0.3
 - Break all benchmarking target into group and kernels.
 - A easy-to-use command line interface.
@@ -114,7 +136,7 @@ Put issues with resonable advices or reproducible problems.
 
 TPBench - A High-Precision Throughputs Benchmark Tool (v0.3-beta)
 
-Copyright (C) 2020 Key Liao (Liao Qiucheng)
+Copyright (C) 2024 Key Liao (Liao Qiucheng)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
